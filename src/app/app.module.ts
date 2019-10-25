@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AuthService } from './service/auth.service';
+import { AuthGuardService } from './service/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -34,13 +35,25 @@ import { AuthService } from './service/auth.service';
     RouterModule.forRoot([
       { path: '', component: HomeComponent }, // front
       { path: 'login', component: LoginComponent },
-      { path: 'admin/home', component: DashboardComponent }, // back
-      { path: 'admin/user', component: UserComponent },
-      { path: 'admin/article', component: ArticleComponent },
+      {
+        path: 'admin/home',
+        component: DashboardComponent,
+        canActivate: [AuthGuardService]
+      }, // back
+      {
+        path: 'admin/user',
+        component: UserComponent,
+        canActivate: [AuthGuardService]
+      },
+      {
+        path: 'admin/article',
+        component: ArticleComponent,
+        canActivate: [AuthGuardService]
+      },
       { path: '**', component: NotFoundComponent }
     ])
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
