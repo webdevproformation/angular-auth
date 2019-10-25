@@ -56,3 +56,26 @@ activer twitter bootstrap / fontawsome dans angular.json
 ajouter un logo
 
 https://fontawesome.com/icons?d=gallery
+
+-----
+fait le html de la barre de menu
+
+-----
+
+fait le html du formulaire de connexion
+
+-----
+
+dans le dashboard.component.html
+
+ajouter à gauche dans laquelle vous avez 4 liens
+
+- retour au front
+- deconnexion
+- gestion des utilisateur
+- gestion des articles 
+
+=> composant Card 
+
+
+
