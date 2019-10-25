@@ -11,6 +11,10 @@ import { UserComponent } from './admin/user/user.component';
 import { ArticleComponent } from './admin/article/article.component';
 
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AuthService } from './service/auth.service';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent }, // front
       { path: 'login', component: LoginComponent },
@@ -34,7 +40,7 @@ import { RouterModule } from '@angular/router';
       { path: '**', component: NotFoundComponent }
     ])
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

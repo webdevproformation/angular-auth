@@ -46,25 +46,27 @@ dans le fichier app.module.ts => définir mes routes
 
 app.component.html
 
-vider => et mettre le squelette commun de toutes les pages 
+vider => et mettre le squelette commun de toutes les pages
 
 ---
 
 activer twitter bootstrap / fontawsome dans angular.json
 
 ---
+
 ajouter un logo
 
 https://fontawesome.com/icons?d=gallery
 
------
+---
+
 fait le html de la barre de menu
 
------
+---
 
 fait le html du formulaire de connexion
 
------
+---
 
 dans le dashboard.component.html
 
@@ -73,9 +75,29 @@ ajouter à gauche dans laquelle vous avez 4 liens
 - retour au front
 - deconnexion
 - gestion des utilisateur
-- gestion des articles 
+- gestion des articles
 
-=> composant Card 
+=> composant Card
+
+---
+
+récupérer les informations qui sont saisies dans le formulaire de connexion
+
+app.module.ts =>
+import { FormsModule } from '@angular/forms';
+
+FormsModule,
+
+et réussi à récupérer ce qui est saisie dans le formulaire
+
+---
+
+créer un service =>
+appeler http://localhost:5000/api/connexion
+
+API répond jwt si tout ok // erreur 
+
+ng g s service/auth
 
 
 
