@@ -1,27 +1,24 @@
-# DemoAuth
+#Demo Auth
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
+ng new demo-auth
+cd demo-auth
+npm i bootstrap
+npm i @auth0/angular-jwt
+npm i @fortawesome/fontawesome-free
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+-----------------
 
-## Code scaffolding
+dans le fichier package.json objet contient deux attributs importants
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+dependencies => toutes lib dedans sont des lib qui permettent le projet de fonctionner
 
-## Build
+npm i <package>
+npm i <package> --save (vieille de npm)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+devDependencies => toutes lib qui sont dedans sont des lib qui vont aider le développeur
+dans le processus de production (pas nécessaire pour faire fonctionner le projet)
 
-## Running unit tests
+npm i <package> --save-dev
+npm i <package> -D
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
