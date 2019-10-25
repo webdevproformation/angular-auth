@@ -43,3 +43,16 @@ Navigation dans le site
 dans le fichier app.module.ts => définir mes routes
 
 ---
+
+app.component.html
+
+vider => et mettre le squelette commun de toutes les pages 
+
+---
+
+activer twitter bootstrap / fontawsome dans angular.json
+
+---
+ajouter un logo
+
+https://fontawesome.com/icons?d=gallery
