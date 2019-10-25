@@ -10,6 +10,8 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { UserComponent } from './admin/user/user.component';
 import { ArticleComponent } from './admin/article/article.component';
 
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,9 +24,17 @@ import { ArticleComponent } from './admin/article/article.component';
     ArticleComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent }, // front
+      { path: 'login', component: LoginComponent },
+      { path: 'admin/home', component: DashboardComponent }, // back
+      { path: 'admin/user', component: UserComponent },
+      { path: 'admin/article', component: ArticleComponent },
+      { path: '**', component: NotFoundComponent }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

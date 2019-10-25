@@ -35,3 +35,11 @@ ng g c front/not-found
 ng g c admin/dashboard
 ng g c admin/user
 ng g c admin/article
+
+---
+
+Navigation dans le site
+
+dans le fichier app.module.ts => définir mes routes
+
+---
