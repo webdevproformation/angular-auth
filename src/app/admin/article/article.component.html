@@ -1,1 +1,38 @@
-<p>article works!</p>
+<form
+  #formNewArticle="ngForm"
+  (submit)="onCreateArticle($event, formNewArticle)"
+>
+  <div class="form-group">
+    <label for="title">Titre</label>
+    <input
+      type="text"
+      name="title"
+      class="form-control"
+      id="contenu"
+      ngModel
+      #title="ngModel"
+    />
+  </div>
+  <div class="form-group">
+    <label for="contenu">Contenu</label>
+    <textarea
+      name="contenu"
+      id="contenu"
+      rows="10"
+      class="form-control"
+      ngModel
+      #contenu="ngModel"
+    ></textarea>
+  </div>
+  <div class="form-group">
+    <input
+      type="submit"
+      class="btn btn-warning"
+      value="Créer un nouvel article"
+    />
+  </div>
+</form>
+<hr />
+<div class="text-center">
+  <a routerLink="/admin/home" class="btn btn-primary">Retour au Dashboard</a>
+</div>

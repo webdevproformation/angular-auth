@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
+  onCreateArticle($event, form) {
+    $event.preventDefault();
+    console.log(form.value);
   }
 
+  ngOnInit() {}
 }
