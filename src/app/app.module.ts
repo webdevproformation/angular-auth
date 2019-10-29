@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AuthService } from './service/auth.service';
 import { AuthGuardService } from './service/auth-guard.service';
+import { ArticleService } from './service/article.service';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,7 @@ import { AuthGuardService } from './service/auth-guard.service';
       { path: '**', component: NotFoundComponent }
     ])
   ],
-  providers: [AuthService, AuthGuardService],
+  providers: [AuthService, AuthGuardService, ArticleService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
